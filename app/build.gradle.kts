@@ -34,7 +34,16 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "extentions.App"
+    mainClass = "project_scanner.App"
+}
+
+tasks.jar {
+    archiveBaseName.set("ProjectScanner")
+    manifest {
+        attributes(
+            "Main-Class" to "project_scanner.App"  // Укажите полный путь к вашему главному классу
+        )
+    }
 }
 
 tasks.named<Test>("test") {
