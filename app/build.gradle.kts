@@ -23,6 +23,21 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+
+    // Add Mockito for mocking objects in tests
+    testImplementation("org.mockito:mockito-core:4.8.1")
+
+    // Add JUnit Vintage for backwards compatibility with older tests (optional)
+    testImplementation("org.junit.vintage:junit-vintage-engine:5.7.2")
+
+    // Add AssertJ for fluent assertions (optional)
+    testImplementation("org.assertj:assertj-core:3.23.0")
+
+    // Add mockito-inline for mocking final classes and methods (optional)
+    testImplementation("org.mockito:mockito-inline:4.8.1")
+
+    // Add FileSystemMock for mocking FileSystem operations (optional)
+    testImplementation("com.github.stefanbirkner:system-lambda:1.2.1")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
